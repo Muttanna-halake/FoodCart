@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>FoodCart</title>
+    <link rel="icon" type="image/x-icon" href="">
+    <link rel="stylesheet" th:href="@{/css/Footer.css}">
+    <!-- FontAwesome (kept as you had it) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Your CSS links (unchanged, dynamic) -->
+    <link rel="stylesheet" href="" th:href="@{/css/Navigation.css}" />
+    <link rel="stylesheet" href="" th:href="@{/css/About.css}" />
+    <link rel="stylesheet" type="text/css" href="abc.css">
+</head>
+<body>
+    <!-- dynamic navigation left intact -->
+    <nav th:replace="~{Navigation::navbar()}"></nav>
+
+    <main class="contact" role="main">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>
+                FoodFrenzy is a web-based application designed to revolutionize food industry management. With its intuitive
+                interface, it streamlines operations by seamlessly managing customer data, inventory, and orders. This
+                comprehensive solution ensures efficient decision-making and provides accessibility from any device, enhancing
+                productivity in the dynamic food business landscape.
+            </p>
+        </div>
+
+        <!-- centered container: left info + right form -->
+        <div class="container">
+            <!-- LEFT column: contact info (kept all classes as-is) -->
+            <aside class="contactInfo" aria-label="Contact information">
+                <div class="box">
+                    <div class="icon"><b></b><i class="fa-sharp fa-solid fa-location-dot"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Poorvarang, Mahalaxminagar,<br> Rajarampuri, Kolhapur,<br>Maharashtra 416008</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><b></b><i class="fa-solid fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>6362303701</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><b></b><i class="fa-solid fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>scanurag@gmail.com</p>
+                    </div>
+                </div>
+
+                <h2 class="txt">Connect with us</h2>
+                <ul class="sci" aria-label="Social links">
+                    <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
+            </aside>
+
+            <!-- RIGHT column: contact form (kept classes & structure) -->
+            <section class="contactForm" aria-labelledby="contact-form-title">
+                <!-- NOTE: I did NOT add any th:action or change form dynamics -->
+                <form method="post" novalidate>
+                    <h2 id="contact-form-title">Send Message</h2>
+
+                    <div class="inputBox">
+                        <input type="text" name="fullName" required placeholder=" " />
+                        <span>Full Name</span>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="email" name="email" required placeholder=" " />
+                        <span>Email</span>
+                    </div>
+
+                    <div class="inputBox">
+                        <textarea name="message" rows="5" required placeholder=" "></textarea>
+                        <span>Type your message...</span>
+                    </div>
+
+                    <div class="inputBox">
+                        <input type="submit" value="Send" />
+                    </div>
+                </form>
+            </section>
+        </div><!-- /.container -->
+    </main>
+<footer th:replace="~{Footer :: footer}"></footer>
+</body>
+</html>

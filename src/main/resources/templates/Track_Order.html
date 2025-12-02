@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Track Order</title>
+
+    <link rel="stylesheet" th:href="@{/css/Footer.css}">
+    <link rel="stylesheet" th:href="@{/css/Navigation.css}">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+            background: #f5f5f5;
+        }
+
+        .track-box {
+            width: 60%;
+            margin: 60px auto;
+            background: white;
+            padding: 25px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            margin-left: 30px;
+        }
+
+        /* Vertical line */
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 8px;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: #d3d3d3;
+        }
+
+        .step {
+            position: relative;
+            padding: 20px 20px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        /* Grey dot */
+        .step::before {
+            content: "";
+            position: absolute;
+            left: -2px;
+            top: 22px;
+            width: 18px;
+            height: 18px;
+            background: #d3d3d3;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 0 3px rgba(0,0,0,0.2);
+        }
+
+        /* ACTIVE GREEN STEP */
+        .step.active {
+            font-weight: bold;
+            color: green;
+        }
+
+        .step.active::before {
+            background: green;
+            border-color: #ffca28
+        }
+    </style>
+</head>
+
+<body>
+<nav th:replace="~{Navigation::navbar()}"></nav>
+<div class="track-box">
+    <div class="title">Track Your Order</div>
+
+    <p><strong>Product:</strong> <span th:text="${order.oName}"></span></p>
+    <p><strong>Status:</strong> <span th:text="${order.status}"></span></p>
+
+    <div class="timeline">
+
+        <!-- ORDERED -->
+        <div class="step"
+             th:classappend="${order.status == 'ORDERED' 
+                              || order.status == 'PACKED' 
+                              || order.status == 'SHIPPED' 
+                              || order.status == 'DELIVERED'} ? ' active'">
+            ORDERED
+        </div>
+
+        <!-- PACKED -->
+        <div class="step"
+             th:classappend="${order.status == 'PACKED' 
+                              || order.status == 'SHIPPED' 
+                              || order.status == 'DELIVERED'} ? ' active'">
+            PACKED
+        </div>
+
+        <!-- SHIPPED -->
+        <div class="step"
+             th:classappend="${order.status == 'SHIPPED' 
+                              || order.status == 'DELIVERED'} ? ' active'">
+            SHIPPED
+        </div>
+
+        <!-- DELIVERED -->
+        <div class="step"
+             th:classappend="${order.status == 'DELIVERED'} ? ' active'">
+            DELIVERED
+        </div>
+
+    </div>
+</div>
+
+<footer th:replace="~{Footer :: footer}"></footer>
+
+</body>
+</html>

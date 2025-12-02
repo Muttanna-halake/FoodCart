@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Buy Product </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif;
+		background:
+			linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+			url("Images/search.jpg");
+		background-size: cover;
+		background-position: center;
+		color: white;
+	}
+
+	.searchInput input {
+		padding: 12px;
+		width: 250px;
+		border: none;
+		border-radius: 6px;
+	}
+
+	.details {
+		margin-top: 40px;
+		width: 70%;
+		padding: 20px;
+		background: rgba(0,0,0,0.5);
+		border-radius: 10px;
+	}
+</style>
+
+<body>
+
+	<a href="/login"
+	   style="position: fixed; top:20px; left:20px; padding:8px 12px; background:#facc15; color:black; border-radius:6px; text-decoration:none;">
+		Back
+	</a>
+
+	<center>
+		<!-- SEARCH PRODUCT -->
+		<form th:action="@{/product/search}" method="post" class="searchInput">
+			<h1>Product Search :</h1>
+			<input type="text" name="productName" required placeholder="Enter Product Name...">
+			<button type="submit" style="padding:12px; background:#22c55e; border:none; border-radius:6px;">Search</button>
+			<br/>
+			<small th:text="${message}" style="color: red;"></small>
+		</form>
+
+
+		<!-- PRODUCT RESULT AFTER SEARCH -->
+		<div th:if="${product != null}" class="details">
+
+			<form th:action="@{/product/order}" method="post">
+
+				<p><b>Product Name:</b></p>
+				<input type="text" name="oName" th:value="${product.pname}" readonly>
+
+				<p><b>Price:</b></p>
+				<input type="text" name="oPrice" th:value="${product.pprice}" readonly>
+
+				<p><b>Quantity:</b></p>
+				<input type="number" name="oQuantity" min="1" required>
+
+				<button type="submit"
+					style="padding:10px; margin-top:15px; background:#0ea5e9; border:none; color:white; border-radius:6px;">
+					Order Now
+				</button>
+
+			</form>
+		</div>
+
+
+		<!-- USER ORDERS -->
+		<div th:if="${orders != null}" class="details">
+			<h2>Your Orders :</h2>
+
+			<table style="width:100%; border-collapse: collapse; text-align:center; color:white;">
+				<tr>
+					<th>Product Name</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Total Amount</th>
+					<th>Date</th>
+				</tr>
+
+				<tr th:each="order : ${orders}">
+					<td th:text="${order.oName}"></td>
+					<td th:text="${order.oPrice}"></td>
+					<td th:text="${order.oQuantity}"></td>
+					<td th:text="${order.totalAmmout}"></td>
+					<td th:text="${order.orderDate}"></td>
+				</tr>
+
+			</table>
+		</div>
+
+	</center>
+
+</body>
+</html>

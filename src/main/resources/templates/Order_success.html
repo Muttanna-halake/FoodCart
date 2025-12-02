@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Successful</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f2f2f2;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* BACKGROUND OVERLAY */
+        .overlay {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.45);
+            backdrop-filter: blur(3px);
+            top: 0;
+            left: 0;
+        }
+
+        /* POPUP BOX */
+        .popup-box {
+            position: relative;
+            width: 420px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+            animation: pop 0.35s ease-out;
+            z-index: 10;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .popup-box h2 {
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+
+        .popup-box p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .amount {
+            font-size: 24px;
+            background: #e8ffe8;
+            padding: 10px 0;
+            border-radius: 10px;
+            color: #27ae60;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .track-btn {
+            background: #ffca28;
+            color: white;
+        }
+
+        .track-btn:hover {
+            background: #1e8e4c;
+        }
+
+        .home-btn {
+            background: #000;
+            color: white;
+        }
+
+        .home-btn:hover {
+            background: #333;
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- BLUR OVERLAY -->
+<div class="overlay"></div>
+
+<!-- POPUP CARD -->
+<div class="popup-box">
+    <h2>🎉 Order Successful!</h2>
+
+    <p>Your order has been placed successfully.</p>
+
+    <div class="amount">
+        Total Paid: <span th:text="'₹ ' + ${amount}"></span>
+    </div>
+
+    <a href="/orders" class="btn track-btn">Track Order</a>
+    <a href="/home" class="btn home-btn">Go Home</a>
+</div>
+
+</body>
+</html>

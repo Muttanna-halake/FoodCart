@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Your Orders</title>
+    <link rel="stylesheet" th:href="@{/css/Orders.css}">
+    <link rel="stylesheet" th:href="@{/css/Footer.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/Navigation.css}">
+    <style>
+        .orders-header {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .orders-title {
+            font-family: 'Poppins', Arial, sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #222;                
+            letter-spacing: 0.6px;
+            margin: 0;
+        }
+        .orders-meta {
+            font-size: 14px;
+            color: #666;
+            margin-left: auto;
+        }
+        .orders-wrapper {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto 60px;
+            display: grid;
+            gap: 16px;
+        }
+
+        .order-card {
+            display: flex;
+            gap: 18px;
+            padding: 16px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            align-items: center;
+        }
+
+        .order-img { width: 110px; height: 110px; object-fit: cover; border-radius: 8px; }
+        .order-info { flex: 1; }
+        .status-badge { padding: 6px 10px; border-radius: 18px; font-weight: 600; font-size: 13px; }
+    </style>
+</head>
+
+<body>
+<nav th:replace="~{Navigation::navbar()}"></nav>
+<div class="orders-header">
+    <h1 class="orders-title">Your Orders</h1>
+    <div class="orders-meta">
+        <span>Track, cancel or view details of your purchases</span>
+    </div>
+</div>
+
+<div class="orders-wrapper">
+
+    <div th:each="o : ${orders}" class="order-card">
+
+        <img class="order-img" th:src="@{'/Images/' + ${o.image}}" alt="product image">
+
+        <div class="order-info">
+            <h2 class="product-name" th:text="${o.oName}"></h2>
+
+            <p class="details">
+                Qty: <span th:text="${o.oQuantity}"></span><br>
+                Price: ₹<span th:text="${o.oPrice}"></span><br>
+                Total: ₹<span th:text="${o.totalAmmout}"></span>
+            </p>
+
+            <span class="status-badge" th:classappend="' '+${o.status}"
+                  th:text="${o.status}"></span>
+
+            <a class="track-btn" th:href="@{'/track/' + ${o.oId}}">
+                Track Order
+            </a>
+
+            <button class="cancel-btn"
+                    th:if="${o.status != 'Cancelled' 
+                            and o.status != 'Shipped' 
+                            and o.status != 'Delivered'}"
+                    th:onclick="'openCancelModal(' + ${o.oId} + ')'">
+                Cancel Order
+            </button>
+
+            <p class="cancel-info" th:if="${o.status == 'Cancelled'}">
+                ❌ Cancelled on
+                <span th:text="${#dates.format(o.cancelDate, 'dd MMM yyyy')}"></span><br>
+                Reason: <span th:text="${o.cancelReason}"></span>
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<!-- CANCEL POPUP -->
+<div id="cancelModal" class="cancel-modal" style="display:none;">
+    <div class="cancel-box" style="max-width:540px;margin:80px auto;background:#fff;padding:20px;border-radius:8px;">
+        <h3>Cancel Order</h3>
+        <p>Please tell us why you want to cancel:</p>
+
+        <form id="cancelForm" method="post">
+            <textarea name="reason" required placeholder="Write reason..." rows="3" style="width:100%;padding:8px;border-radius:6px;"></textarea>
+
+            <div style="margin-top:12px; display:flex; gap:8px;">
+                <button type="submit" class="confirm-cancel" style="background:#e74c3c;color:#fff;border:none;padding:8px 12px;border-radius:6px;">Submit</button>
+                <button type="button" class="close-cancel" onclick="closeCancel()" style="background:#bdc3c7;border:none;padding:8px 12px;border-radius:6px;">Close</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer th:replace="~{Footer :: footer}"></footer>
+
+<script>
+let currentOrderId = null;
+function openCancelModal(orderId) {
+    currentOrderId = orderId;
+    document.getElementById("cancelModal").style.display = "flex";
+    document.getElementById("cancelForm").setAttribute("action", "/cancel-order/" + orderId);
+}
+function closeCancel() {
+    document.getElementById("cancelModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>

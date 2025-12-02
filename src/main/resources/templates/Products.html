@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>FoodCart - Products</title>
+
+    <link rel="stylesheet" href="" th:href="@{/css/Navigation.css}" />
+    <link rel="stylesheet" href="" th:href="@{/css/Products.css}" />
+    <link rel="stylesheet" th:href="@{/css/Footer.css}">
+     <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav th:replace="~{Navigation::navbar()}"></nav>
+<div class="search-container">
+    <form th:action="@{/products/search}" method="post">
+        <input 
+            type="text" 
+            name="keyword" 
+            th:value="${searchText}"
+            placeholder="Search products..." 
+            class="search-input">
+        
+        <button type="submit" class="search-btn">
+            <i class="fa fa-search"></i>
+        </button>
+    </form>
+</div>
+
+
+
+
+
+
+    <div id="main-container">
+        <div id="biryani" th:classappend="${products.size() == 1} ? ' search-results'">
+
+            <!-- LOOP THROUGH ALL PRODUCTS -->
+            <div class="item-card" th:each="p : ${products}">
+                
+                <div class="card-top">
+                    <i class="fa fa-star" id="rating">★</i>
+                    <i class="fa fa-heart-o add-to-cart"></i>
+                </div>
+
+                <!-- CLICK → Single Product Page -->
+                <a th:href="@{'/product/' + ${p.pid}}">
+                    <img th:src="@{'/Images/' + ${p.image}}" 
+                         alt="Product Image"
+                         style="width:100%; height:200px; object-fit:cover;">
+                </a>
+
+                <a th:href="@{'/product/' + ${p.pid}}" 
+                   class="item-name"
+                   th:text="${p.pname}">
+                </a>
+
+                <p class="item-price">
+                    Price: Rs <span th:text="${p.pprice}"></span>
+                </p>
+
+                <!-- BUY BUTTON -->
+                <a href="/login" class="buy-btn">Buy Now</a>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ALERT BEFORE LOGIN -->
+    <script>
+        document.querySelectorAll(".buy-btn").forEach(btn => {
+            btn.addEventListener("click", function (event) {
+                event.preventDefault();
+                alert("Please Login as a User to buy Products");
+            });
+        });
+    </script>
+<footer th:replace="~{Footer :: footer}"></footer>
+</body>
+</html>
