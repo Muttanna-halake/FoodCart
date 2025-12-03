@@ -1,5 +1,6 @@
 # FoodCart
 Foodcart is a full-stack food ordering and management system designed to handle products, customers, and orders efficiently. It includes secure user authentication, session handling, and dynamic content rendering with Thymeleaf. The backend is built using Spring Boot with MySQL integration, while the frontend is created using HTML, CSS, and Thymeleaf templates. Admin users can add, update, and manage food items, while customers can browse products, place orders, view their order history, and track their account activity. The system ensures a smooth workflow with clear separation between frontend UI and backend logic.
+
 <img width="1920" height="2277" alt="Home page" src="https://github.com/user-attachments/assets/4dec73c3-32d1-4b08-beca-19290af7576a" />
 
 
