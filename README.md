@@ -1,5 +1,5 @@
-# FoodFrenzy
-FoodFrenzy is a comprehensive system designed for managing customers, inventory, and orders. It offers secure authentication, role-based access control, and database integration using MySQL. Built with Spring Boot and Thymeleaf, the application provides a seamless experience for admin and staff members.
+# FoodCart
+Foodcart is a full-stack food ordering and management system designed to handle products, customers, and orders efficiently. It includes secure user authentication, session handling, and dynamic content rendering with Thymeleaf. The backend is built using Spring Boot with MySQL integration, while the frontend is created using HTML, CSS, and Thymeleaf templates. Admin users can add, update, and manage food items, while customers can browse products, place orders, view their order history, and track their account activity. The system ensures a smooth workflow with clear separation between frontend UI and backend logic.
 
 ![Screenshot 2024-10-02 123332](https://github.com/user-attachments/assets/1382d32f-3cbb-40c3-b6b5-9fc55cd5176f)
 
