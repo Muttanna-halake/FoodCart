@@ -39,7 +39,7 @@ Before running this project, ensure you have the following installed:
 - Eclipse or Spring Tool Suite (STS)
 ## Website Screenshot
 
-Here is a preview of the FoodFrenzy interface:
+Here is a preview of the FoodCart interface:
 
 ![Screenshot 2025-05-19 143351](https://github.com/user-attachments/assets/3e34f54c-c986-42ac-96a4-ed7ad18035a6)
 ![Screenshot 2025-05-19 143427](https://github.com/user-attachments/assets/a4046d4e-8c3d-4629-8913-5543d709e80e)
