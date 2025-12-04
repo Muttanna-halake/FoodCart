@@ -67,6 +67,12 @@ Here is a preview of the FoodCart interface:
 <img width="1913" height="785" alt="Update-product" src="https://github.com/user-attachments/assets/0c976e72-3e5d-447b-80d3-43f6892b69d6" />
 
 <img width="1883" height="578" alt="Status-update" src="https://github.com/user-attachments/assets/11655c1f-3418-4c01-82ae-47b65f68cbe3" />
+
+<img width="1911" height="863" alt="search" src="https://github.com/user-attachments/assets/e29998ad-d5be-43b4-9718-f1c6957115ab" />
+
+<img width="1920" height="1552" alt="Aboutus" src="https://github.com/user-attachments/assets/00bdcc23-0a12-4a61-94e5-aa46df55d482" />
+
+<img width="1920" height="1696" alt="Visit" src="https://github.com/user-attachments/assets/a9c4ed48-86fb-46f0-8b55-d83ef726f089" />
 ## Project Structure
 
 ```bash
