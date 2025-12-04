@@ -4,39 +4,23 @@ Foodcart is a full-stack food ordering and management system designed to handle 
 <img width="1920" height="2277" alt="Home page" src="https://github.com/user-attachments/assets/4dec73c3-32d1-4b08-beca-19290af7576a" />
 
 
-Features
-
-User Management: Users can register, log in, and manage their food orders easily.
-
-Admin Management: Admins can log in from a separate admin page and manage products, users, other admins, and orders.
-
-Product Management: Add, update, delete, and display food products with images, descriptions, and prices.
-
-Order Management: Users can place orders, view order history, cancel orders with reason, and track order status.
-
-Order Tracking: Flipkart-style tracking system showing status stages — Ordered, Packed, Shipped, Delivered.
-
-Order Cancellation: Users can cancel orders (before shipping) with a popup reason box, and cancelled orders store reason & cancel date.
-
-Admin Order Control: Admin can update order status from the admin panel (Ordered → Packed → Shipped → Delivered).
-
-Inventory Display: Products are displayed beautifully with images, prices, and detail pages.
-
-User Authentication: Secure login system for users and admins with session management.
-
-Role-Based Access Control: User and Admin panels separated with different permissions.
-
-Reusable Navbar & Footer: Every page uses a common navigation bar and footer (Thymeleaf fragments).
-
-Responsive Navigation: Mobile-friendly hamburger menu for small devices.
-
-Search Functionality: Users can search for any product directly.
-
-Cart-like Ordering: Users can select quantity before ordering.
-
-Dynamic Thymeleaf Templates: All pages dynamically updated using Spring Boot + Thymeleaf.
-
-Database Integration: Fully connected to MySQL to store users, products, orders, admins, and tracking details.
+## Features
+- **User Management**: Users can register, log in, and manage their food orders easily.
+- **Admin Management**: Admins can log in from a separate admin page and manage products, users, other admins, and orders.
+- **Product Management**: Add, update, delete, and display food products with images, descriptions, and prices.
+- **Order Management**: Users can place orders, view order history, cancel orders with reason, and track order status.
+- **Order Tracking**: Flipkart-style tracking system showing status stages — Ordered, Packed, Shipped, Delivered.
+- **Order Cancellation**: Users can cancel orders (before shipping) with a popup reason box, and cancelled orders store reason & cancel date.
+- **Admin Order Control**: Admin can update order status from the admin panel (Ordered → Packed → Shipped → Delivered).
+- **Inventory Display**: Products are displayed beautifully with images, prices, and detail pages.
+- **User Authentication**: Secure login system for users and admins with session management.
+- **Role-Based Access Control**: User and Admin panels separated with different permissions.
+- **Reusable Navbar & Footer**: Every page uses a common navigation bar and footer (Thymeleaf fragments).
+- **Responsive Navigation**: Mobile-friendly hamburger menu for small devices.
+- **Search Functionality**: Users can search for any product directly.
+-**Cart-like Ordering**: Users can select quantity before ordering.
+- **Dynamic Thymeleaf Templates**: All pages dynamically updated using Spring Boot + Thymeleaf.
+- **Database Integration**: Fully connected to MySQL to store users, products, orders, admins, and tracking details.
 
 ## Technology Stack
 
