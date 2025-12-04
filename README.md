@@ -41,28 +41,32 @@ Before running this project, ensure you have the following installed:
 
 Here is a preview of the FoodCart interface:
 <img width="1920" height="2028" alt="Foods" src="https://github.com/user-attachments/assets/94969acc-f499-4e0f-b5b5-7aedd6937ee3" />
-![Screenshot 2025-05-19 143427](https://github.com/user-attachments/assets/a4046d4e-8c3d-4629-8913-5543d709e80e)
-![Screenshot 2025-05-19 143441](https://github.com/user-attachments/assets/09c92348-ec06-4607-9ae4-88b28cc1e0ec)
-![Screenshot 2025-05-19 143452](https://github.com/user-attachments/assets/0e73aece-a28c-413d-9363-245358a0e439)
-![Screenshot 2025-05-19 143504](https://github.com/user-attachments/assets/ac26bd92-0fcd-473d-a175-9bc45fdb12ba)
 
+<img width="1920" height="2467" alt="Admin-dashboard" src="https://github.com/user-attachments/assets/38f17b8f-0e69-4348-96cd-ab29163f78aa" />
 
-![image](https://github.com/user-attachments/assets/3d407958-efbe-449f-b4e1-5b08b9f8a28b)
+<img width="1919" height="872" alt="Add-Admin" src="https://github.com/user-attachments/assets/0c2f9a1d-b33c-4958-9cf9-c612e5730b25" />
 
+<img width="1919" height="870" alt="Add-user" src="https://github.com/user-attachments/assets/7d058c9c-ee04-406c-84f8-28a293c33dc6" />
 
-![Screenshot 2024-08-24 194958](https://github.com/user-attachments/assets/c11a4710-69f8-42fd-b9d7-2b5278b2c8a3) 
+<img width="1901" height="871" alt="Add-product" src="https://github.com/user-attachments/assets/82b12baa-df6c-43fe-87bd-a882369f81fd" />
 
+<img width="1910" height="759" alt="Login-User" src="https://github.com/user-attachments/assets/ecc9397f-b540-4b81-b61c-4514232533b1" />
 
-![Screenshot 2024-08-24 220831](https://github.com/user-attachments/assets/d3cd3cdd-cda5-460a-a253-24e45cf600b0)  
-![Screenshot 2024-08-24 195054](https://github.com/user-attachments/assets/733afb94-a251-4a6d-86a4-3a124e8c3469)
-![Screenshot 2024-08-24 195106](https://github.com/user-attachments/assets/ef09886f-7936-4ef7-b01e-4da0008fd047) 
-![Screenshot 2024-08-24 195121](https://github.com/user-attachments/assets/219272b8-3938-4b7f-ba78-817e507beee9)
-![Screenshot 2024-10-03 093051](https://github.com/user-attachments/assets/d4da51a4-dfe8-4cc1-ae49-745f6e1ae17a) 
-![Screenshot 2024-10-03 093106](https://github.com/user-attachments/assets/09c31cf7-e960-4ea5-a858-8807317486b7)
-![Screenshot 2024-10-03 093133](https://github.com/user-attachments/assets/b1da1faa-7e71-49be-972a-432029a1e7c3) 
-![Screenshot 2024-10-03 093424](https://github.com/user-attachments/assets/b0a9a1e2-6018-475a-95fc-d64980677ee7) 
-![Screenshot 2024-10-03 093437](https://github.com/user-attachments/assets/b860f905-2c35-4af3-9df8-38cda70b4406)
+<img width="1920" height="1688" alt="Single-Product-page" src="https://github.com/user-attachments/assets/d21d03ec-391e-4d77-830b-ea80abdd907e" />
 
+<img width="1903" height="870" alt="Checkout-Page" src="https://github.com/user-attachments/assets/0d2ad9ac-299e-492f-9ea7-834a75b0ad45" />
+
+<img width="1918" height="860" alt="Order-Scucess" src="https://github.com/user-attachments/assets/a61d6ff4-fe97-4917-8ada-2e01317a6da2" />
+
+<img width="1919" height="869" alt="Orders-page" src="https://github.com/user-attachments/assets/132fd37f-9b42-4748-a037-32e866adc70d" />
+
+<img width="1917" height="865" alt="Order-track-page" src="https://github.com/user-attachments/assets/7cf0bdb9-a04b-403e-b0dc-efee337de83a" />
+
+<img width="1898" height="863" alt="Order-cancelation-reson" src="https://github.com/user-attachments/assets/9029c7c5-4558-4079-8bd1-86f4b12cd993" />
+
+<img width="1913" height="785" alt="Update-product" src="https://github.com/user-attachments/assets/0c976e72-3e5d-447b-80d3-43f6892b69d6" />
+
+<img width="1883" height="578" alt="Status-update" src="https://github.com/user-attachments/assets/11655c1f-3418-4c01-82ae-47b65f68cbe3" />
 ## Project Structure
 
 ```bash
