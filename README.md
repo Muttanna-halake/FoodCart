@@ -36,7 +36,7 @@ Before running this project, ensure you have the following installed:
 - Java 8
 - MySQL
 - Maven
-- Eclipse or Spring Tool Suite (STS)
+- Vs Code or Spring Tool Suite (STS)
 ## Website Screenshot
 
 Here is a preview of the FoodCart interface:
