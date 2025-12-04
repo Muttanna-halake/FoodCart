@@ -40,8 +40,7 @@ Before running this project, ensure you have the following installed:
 ## Website Screenshot
 
 Here is a preview of the FoodCart interface:
-
-![Screenshot 2025-05-19 143351](https://github.com/user-attachments/assets/3e34f54c-c986-42ac-96a4-ed7ad18035a6)
+<img width="1920" height="2028" alt="Foods" src="https://github.com/user-attachments/assets/94969acc-f499-4e0f-b5b5-7aedd6937ee3" />
 ![Screenshot 2025-05-19 143427](https://github.com/user-attachments/assets/a4046d4e-8c3d-4629-8913-5543d709e80e)
 ![Screenshot 2025-05-19 143441](https://github.com/user-attachments/assets/09c92348-ec06-4607-9ae4-88b28cc1e0ec)
 ![Screenshot 2025-05-19 143452](https://github.com/user-attachments/assets/0e73aece-a28c-413d-9363-245358a0e439)
