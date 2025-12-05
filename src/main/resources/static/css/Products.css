@@ -11,8 +11,8 @@ body {
     display: flex;
     justify-content: center; 
     align-items: flex-start;
-    overflow-y: auto; 
-    height: 80vh; 
+    /* overflow-y: auto; 
+    height: 80vh;  */
     padding: 20px;
 }
 
@@ -29,7 +29,7 @@ body {
     background-color: #666; 
 }
 
-#biryani {
+/* #biryani {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
     grid-gap: 20px; 
@@ -40,7 +40,21 @@ body {
     background-color: #fff;
     border-radius: 10px;
     text-align: center !important;
+} */
+
+#biryani {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* EXACTLY 5 COLUMNS */
+    grid-gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center !important;
 }
+
 
 #category-name {
     font-size: 2rem;
@@ -200,3 +214,14 @@ body {
     }
 }
 
+@media (max-width: 1024px) {
+    #biryani {
+        grid-template-columns: repeat(3, 1fr); /* tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    #biryani {
+        grid-template-columns: repeat(2, 1fr); /* mobile */
+    }
+}
